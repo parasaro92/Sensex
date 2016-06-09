@@ -19,6 +19,7 @@ myApp.controller('popCtrl', function(popService, $http){
   
   pop.country = "IN";
   pop.year = "2010";
+  pop.year2 = "2011";
 
   pop.getdata = function(){
 
@@ -26,6 +27,19 @@ myApp.controller('popCtrl', function(popService, $http){
     console.log(pop.data);
   }
   pop.getdata();
+
+  pop.newdata = function(){
+
+    pop.data = popService.getData.query({FIPS: pop.country, time: pop.year2, SEX: 0 });
+    console.log(pop.data1);
+  }
+  pop.newdata();
+
+  pop.roundedPercentage = function(){
+    var result = ((pop.data1['3'] - pop.data['3']/pop.data['3'])*100)
+    return Math.round(result, 2);
+  }
+  pop.roundedPercentage();
 });
 
 myApp.service('popService', function($resource){
