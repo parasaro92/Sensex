@@ -1,35 +1,56 @@
 <h1 class="text-center">Get the Population</h1>
-<form>
+<div class="container">
+<form role="form">
   <div class="form-group">
-    <div class="row">
-      <div class="container">
-        <div class="col-md-4">    
-          <label for="country">Country</label>
-          <!-- <input type="text" class="form-control" ng-model="source" id="source" placeholder="Source"> -->
-          <select ng-model="country"  class="form-control" ng-options="content.NAME as content.NAME for content in contents">
-          <!-- <select ng-model="dest.source"  class="form-control">
-            <option value=""></option>
-            <option ng-repeat="content in contents" value="{{content.From}}">{{content.From}}</option>
-          </select> -->
-          </select>
-        </div>
-        <div class="col-md-1 col-xs-hidden"><i class="fa fa-exchange fa-2x" aria-hidden="true"></i></div>
-        <div class="col-md-4">
-          <label for="year">Year</label>
-          <!-- <input type="text" class="form-control" ng-model="destination" id="destination" placeholder="Destination"> -->
-           <select ng-model="year" class="form-control" ng-options="content.time as content.time for content in contents" value="Delhi" ng-selected="selected">
-          </select>
-          <!-- <select ng-model="dest.source"  class="form-control">
-            <option value=""></option>
-            <option ng-repeat="content in contents" value="{{content.To}}">{{content.To}}</option>
-          </select> -->
-        </div>
-      </div>
+    <div class="col-md-6">
+      <label>Select the country:</label>
+      <select class="form-control" ng-model="main.country" ng-change="main.getdata()">
+        <option value="IN">India</option>
+        <option value="UK">United Kingdom</option>
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label>Select the year:</label>
+      <select class="form-control" ng-model="main.year" ng-change="main.getdata()">
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+      </select>
     </div>
   </div>
-<!--   <div class="row">
-      <div class="col-md-offset-8 col-xs-offset-5">
-        <input type="submit" ng-click="submit(user)" value="Submit" class="btn btn-primary" />
-      </div>
-  </div>   -->
 </form>
+<!-- <pre>user = {{user | json}}</pre> -->
+  <!-- <pre>master = {{master | json}}</pre> -->
+</div>
+
+<div class ="row slot1">
+  <div class="container">
+    <div class="col-md-6" id="result">
+      <div class="container-fluid slot">
+       <h3>World</h3>
+      </div>
+      <table class="table table-hover">
+        <thead class= "thead-default">
+          <tr>
+          <!-- <th>#</th> -->
+          <th>Country</th>
+          <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat = "n in main.data">
+          <!-- <a ng-href="#/fixtures/{{tables.id}}"> -->
+          <th scope="row">{{n['3']}}</th>
+          <td>{{n['2']}}</td>
+            <!-- </a> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

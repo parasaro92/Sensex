@@ -8,6 +8,11 @@ myApp.config(function($routeProvider){
     controller: 'mainCtrl',
     controllerAs: 'main'
   })
+  .when('/pop', {
+    templateUrl: 'pages/pop.html',
+    controller: 'popCtrl',
+    controllerAs: 'pop'
+  })
   .otherwise({
     redirectTo: '/'
   });
