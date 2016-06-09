@@ -1,2 +1,35 @@
-
-{{main.name}}
+<h1 class="text-center">Get the Population</h1>
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="container">
+        <div class="col-md-4">    
+          <label for="country">Country</label>
+          <!-- <input type="text" class="form-control" ng-model="source" id="source" placeholder="Source"> -->
+          <select ng-model="country"  class="form-control" ng-options="content.NAME as content.NAME for content in contents">
+          <!-- <select ng-model="dest.source"  class="form-control">
+            <option value=""></option>
+            <option ng-repeat="content in contents" value="{{content.From}}">{{content.From}}</option>
+          </select> -->
+          </select>
+        </div>
+        <div class="col-md-1 col-xs-hidden"><i class="fa fa-exchange fa-2x" aria-hidden="true"></i></div>
+        <div class="col-md-4">
+          <label for="year">Year</label>
+          <!-- <input type="text" class="form-control" ng-model="destination" id="destination" placeholder="Destination"> -->
+           <select ng-model="year" class="form-control" ng-options="content.time as content.time for content in contents" value="Delhi" ng-selected="selected">
+          </select>
+          <!-- <select ng-model="dest.source"  class="form-control">
+            <option value=""></option>
+            <option ng-repeat="content in contents" value="{{content.To}}">{{content.To}}</option>
+          </select> -->
+        </div>
+      </div>
+    </div>
+  </div>
+<!--   <div class="row">
+      <div class="col-md-offset-8 col-xs-offset-5">
+        <input type="submit" ng-click="submit(user)" value="Submit" class="btn btn-primary" />
+      </div>
+  </div>   -->
+</form>
