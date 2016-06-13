@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngResource']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'highcharts-ng']);
 
 myApp.config(function($routeProvider){
 
