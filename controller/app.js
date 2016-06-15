@@ -10,8 +10,8 @@ myApp.config(function($routeProvider){
   })
   .when('/pop', {
     templateUrl: 'pages/pop.html',
-    controller: 'popCtrl',
-    controllerAs: 'pop'
+    controller: 'percentCtrl',
+    controllerAs: 'perc'
   })
   .otherwise({
     redirectTo: '/'

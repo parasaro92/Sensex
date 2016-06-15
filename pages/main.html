@@ -1,67 +1,43 @@
 <h1 class="text-center">Get the Population</h1>
 <hr>
-<highchart id="chart1" config="main.chartConfig"></highchart>
-<div class="container">
-<form role="form">
-  <div class="form-group">
-    <div class="col-md-4">
-      <label>Select the country:</label>
-      <select class="form-control" ng-model="main.country" ng-change="main.getdata()">
-        <option value="IN">India</option>
-        <option value="UK">United Kingdom</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-      </select>
+<div class="container">  
+  <highchart id="chart1" config="main.chartConfig"></highchart>
+  <form role="form">
+    <div class="form-group">
+      <div class="col-md-4">
+        <label>Select the country:</label>
+        <select class="form-control" ng-model="main.country" ng-change="main.getdata()">
+          <option value="IN">India</option>
+          <option value="UK">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Select the year:</label>
+        <select class="form-control" ng-model="main.year" ng-change="main.getdata()">
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Select the gender:</label>
+        <select class="form-control" ng-model="main.sex" ng-change="main.getdata()">
+          <option value="0">Both</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+      </div>
     </div>
-    <div class="col-md-4">
-      <label>Select the year:</label>
-      <select class="form-control" ng-model="main.year" ng-change="main.getdata()">
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-      </select>
-    </div>
-    <div class="col-md-4">
-      <label>Select the gender:</label>
-      <select class="form-control" ng-model="main.sex" ng-change="main.getData()">
-        <option value="0">Both</option>
-        <option value="1">Male</option>
-        <option value="2">Female</option>
-      </select>
-    </div>
-  </div>
 
-  <div class="col-md-4 text-center">
+    <div class="col-md-4">
       <a href="#/" id = "viewDataButton" class="btn btn-info">View Result</a>
     </div>
-</form>
-<!-- <pre>user = {{user | json}}</pre> -->
-  <!-- <pre>master = {{master | json}}</pre> -->
+  </form>
 </div>
 
-<!-- <div class ="row slot1">
-  <div class="container">
-    <div class="col-md-6" id="result">
-      <div class="container-fluid slot">
-       <h3>World</h3>
-      </div>
-      <table class="table table-hover">
-        <thead class= "thead-default">
-          <tr>
-          <th>Country</th>
-          <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat = "n in main.data">
-          <th scope="row">{{n['3']}}</th>
-          <td>{{n['2']}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div> -->
+
 

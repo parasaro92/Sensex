@@ -1,21 +1,22 @@
 <h1 class="text-center">Population Stats</h1>
-<div class="row">
+<!-- <div class="row"> -->
   <div class="container">
-    <div class="col-md-6">
+    <highchart id="chart1" config="perc.chartConfig"></highchart>
+    <!-- <div class="col-md-6"> -->
     <form role="form">
       <div class="form-group">
-        <div class="col-md-12">
+        <div class="col-md-4">
           <label>Select the country:</label>
-          <select class="form-control" ng-model="pop.country" ng-change="pop.getdata()">
+          <select class="form-control" ng-model="perc.country" ng-change="perc.getperc()">
             <option value="IN">India</option>
             <option value="UK">United Kingdom</option>
             <option value="US">United States</option>
             <option value="CA">Canada</option>
           </select>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-4">
           <label>Select the year1:</label>
-          <select class="form-control" ng-model="pop.year" ng-change="pop.getdata()">
+          <select class="form-control" ng-model="perc.year1" ng-change="perc.getperc()">
             <option value="2010">2010</option>
             <option value="2011">2011</option>
             <option value="2012">2012</option>
@@ -23,9 +24,9 @@
             <option value="2014">2014</option>
           </select>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-4">
           <label>Select the year2:</label>
-          <select class="form-control" ng-model="pop.year2" ng-change="pop.newdata()">
+          <select class="form-control" ng-model="perc.year2" ng-change="perc.getperc()">
             <option value="2010">2010</option>
             <option value="2011">2011</option>
             <option value="2012">2012</option>
@@ -39,29 +40,4 @@
 
 <!-- <div class ="row slot1"> -->
   <!-- <div class="container"> -->
-    <div class="col-md-6" id="result">
-      <div class="container-fluid slot">
-       <h3>World</h3>
-      </div>
-      <table class="table table-hover">
-        <thead class= "thead-default">
-          <tr>
-          <!-- <th>#</th> -->
-          <th>pop</th>
-          <th>Age</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat = "n in pop.result">
-          <!-- <a ng-href="#/fixtures/{{tables.id}}"> -->
-          <td ng-bind="n.roundedPercentage() + '%'"></td>
-          <!-- <th scope="row">{{n['3']}}</th> -->
-          <td>{{n['2']}}</td>
-            <!-- </a> -->
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
+    <!--  -->
